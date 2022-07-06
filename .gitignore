@@ -1,4 +1,4 @@
 /.DS_Store
-/config
+/config/host.js
 /node_modules
 /package-lock.json
