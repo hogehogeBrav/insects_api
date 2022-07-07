@@ -25,6 +25,6 @@ app.get("/insects/:insects_id", function (req, res) {
   });
 });
 
-app.listen(3000,function(){
+app.listen(config.apiPort , function(){
     console.log("成功")
 })
