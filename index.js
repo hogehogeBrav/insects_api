@@ -28,7 +28,11 @@ app.get("/insects/:insects_id", function (req, res) {
       console.log(error);
       res.send({ success: false, message: 'query error', error: error });
     } else {
-      res.send(results);
+      if (results.length > 0) {
+        res.send(results);
+      } else {
+        res.send({ success: false, message: 'insect not found' });
+      }
     }
   });
 });
