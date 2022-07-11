@@ -2,7 +2,7 @@ var exp = require("express");
 var app = exp();
 var config = require("./config/host");
 
-var mysql = require("mysql");
+var mysql = require("mysql2");
 var connection = mysql.createPool({
   host: config.dbHost,
   port: config.dbPort,
@@ -39,4 +39,4 @@ app.get("/insects/:insects_id", function (req, res) {
 
 app.listen(config.apiPort , function(){
     console.log("成功")
-})
+});
