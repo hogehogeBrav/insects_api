@@ -52,5 +52,5 @@ app.get("/insects/:insects_id", function (req, res) {
 });
 
 app.listen(config.apiPort , function(){
-    console.log("成功")
+    console.log("Server started on port " + config.apiPort);
 });
