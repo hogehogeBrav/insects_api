@@ -1,8 +1,9 @@
 var exp = require("express");
 var app = exp();
 var config = require("./config/host");
-
 var mysql = require("mysql2");
+
+//database connection settings
 var connection = mysql.createPool({
   host: config.dbHost,
   port: config.dbPort,
