@@ -14,6 +14,7 @@ var connection = mysql.createPool({
 
 //category
 app.get("/categories", function (req, res) {
+  res.header('Content-Type', 'text/html;charset=utf-8');
   connection.query('select * from insect_categories', function (error, results, fields) {
     if (error) {
       console.log(error);
@@ -26,6 +27,7 @@ app.get("/categories", function (req, res) {
 
 //insect list
 app.get("/insects", function (req, res) {
+  res.header('Content-Type', 'text/html;charset=utf-8');
   connection.query('select * from insects', function (error, results, fields) {
     if (error) {
       console.log(error);
@@ -38,6 +40,7 @@ app.get("/insects", function (req, res) {
 
 //insect from insect_id
 app.get("/insects/:insects_id", function (req, res) {
+  res.header('Content-Type', 'text/html;charset=utf-8');
   connection.query('select * from insects where insect_id = ' + req.params.insects_id , function (error, results, fields) {
     if (error) {
       console.log(error);
